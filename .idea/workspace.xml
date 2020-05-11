@@ -2,19 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7af95ff3-02ac-4c2d-b269-b57bc81a8c16" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Content/Header/Header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Content/Header/Header.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Content/NavBar/NavBar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Content/NavBar/NavBar.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Content/Profile/Profile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Content/Profile/Profile.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/untitled.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SocialNetwork.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Content/Profile/MyPosts/MyPosts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Content/Profile/MyPosts/MyPosts.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Content/Profile/MyPosts/Post/Post.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Content/Profile/MyPosts/Post/Post.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Content/Header/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Content/Header/Header.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Content/NavBar/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Content/NavBar/NavBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Content/NavBar/NavBar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Content/NavBar/NavBar.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Content/Profile/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Content/Profile/Profile.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,8 +74,16 @@
       <option name="presentableId" value="Default" />
       <updated>1589185051916</updated>
       <workItem from="1589185053350" duration="1378000" />
-      <workItem from="1589186909409" duration="7221000" />
+      <workItem from="1589186909409" duration="11481000" />
     </task>
+    <task id="LOCAL-00001" summary="Add components navbar, header and profile">
+      <created>1589208629086</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1589208629087</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -96,15 +100,19 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add components navbar, header and profile" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add components navbar, header and profile" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="240" y="44" key="#Notifications" timestamp="1589186362769">
       <screen x="0" y="22" width="1280" height="710" />
     </state>
     <state x="240" y="44" key="#Notifications/0.22.1280.710@0.22.1280.710" timestamp="1589186362769" />
-    <state x="232" y="22" key="CommitChangelistDialog2" timestamp="1589208574722">
+    <state x="232" y="22" key="CommitChangelistDialog2" timestamp="1589208628048">
       <screen x="0" y="22" width="1280" height="710" />
     </state>
-    <state x="232" y="22" key="CommitChangelistDialog2/0.22.1280.710@0.22.1280.710" timestamp="1589208574722" />
+    <state x="232" y="22" key="CommitChangelistDialog2/0.22.1280.710@0.22.1280.710" timestamp="1589208628048" />
     <state x="497" y="282" key="Github.ShareDialog" timestamp="1589187840914">
       <screen x="0" y="22" width="1280" height="710" />
     </state>
@@ -129,9 +137,13 @@
       <screen x="0" y="22" width="1280" height="710" />
     </state>
     <state x="149" y="22" width="982" height="710" key="SettingsEditor/0.22.1280.710@0.22.1280.710" timestamp="1589186456309" />
-    <state x="305" y="56" key="search.everywhere.popup" timestamp="1589194792154">
+    <state x="240" y="118" key="Vcs.Push.Dialog.v2" timestamp="1589208654433">
       <screen x="0" y="22" width="1280" height="710" />
     </state>
-    <state x="305" y="56" key="search.everywhere.popup/0.22.1280.710@0.22.1280.710" timestamp="1589194792154" />
+    <state x="240" y="118" key="Vcs.Push.Dialog.v2/0.22.1280.710@0.22.1280.710" timestamp="1589208654433" />
+    <state x="305" y="56" width="670" height="676" key="search.everywhere.popup" timestamp="1589223922780">
+      <screen x="0" y="22" width="1280" height="710" />
+    </state>
+    <state x="305" y="56" width="670" height="676" key="search.everywhere.popup/0.22.1280.710@0.22.1280.710" timestamp="1589223922780" />
   </component>
 </project>

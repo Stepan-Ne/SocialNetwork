@@ -1,0 +1,15 @@
+.ava {
+    height: 50px;
+    width: 50px;
+    background-color: lightsalmon;
+    border-radius: 25px;
+    display: inline-block;
+}
+.item {
+    padding: 1em;
+}
+.post {
+    display: inline-block;
+    background-color: lightskyblue;
+
+}
