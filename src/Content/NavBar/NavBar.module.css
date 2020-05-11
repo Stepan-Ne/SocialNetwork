@@ -1,0 +1,11 @@
+.navbar {
+    grid-area: n;
+    background-color: antiquewhite;
+}
+.item {
+    display: block;
+
+}
+.item div {
+    padding-bottom: 1rem;
+}
