@@ -2,15 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7af95ff3-02ac-4c2d-b269-b57bc81a8c16" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Content/Profile/MyPosts/MyPosts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Content/Profile/MyPosts/MyPosts.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Content/Profile/MyPosts/Post/Post.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Content/Profile/MyPosts/Post/Post.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Content/Dialogs/Dialogs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Content/Dialogs/Dialogs.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Content/News/News.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Content/News/News.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Content/Settings/Settings.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Content/Settings/Settings.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Content/Header/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Content/Header/Header.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Content/NavBar/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Content/NavBar/NavBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Content/NavBar/NavBar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Content/NavBar/NavBar.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Content/Profile/MyPosts/Post/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Content/Profile/MyPosts/Post/Post.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Content/Profile/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Content/Profile/Profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Content/Profile/Profile.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Content/Profile/Profile.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +45,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Content/News" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -47,6 +53,11 @@
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Content/News" />
+    </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
@@ -74,7 +85,9 @@
       <option name="presentableId" value="Default" />
       <updated>1589185051916</updated>
       <workItem from="1589185053350" duration="1378000" />
-      <workItem from="1589186909409" duration="11481000" />
+      <workItem from="1589186909409" duration="13907000" />
+      <workItem from="1589273490223" duration="1331000" />
+      <workItem from="1589379696765" duration="1567000" />
     </task>
     <task id="LOCAL-00001" summary="Add components navbar, header and profile">
       <created>1589208629086</created>
@@ -83,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589208629087</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add components MyPosts and Post">
+      <created>1589226304811</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1589226304811</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -94,7 +114,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -102,45 +124,46 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add components navbar, header and profile" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add components navbar, header and profile" />
+    <MESSAGE value="Add components MyPosts and Post" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add components MyPosts and Post" />
   </component>
   <component name="WindowStateProjectService">
     <state x="240" y="44" key="#Notifications" timestamp="1589186362769">
       <screen x="0" y="22" width="1280" height="710" />
     </state>
     <state x="240" y="44" key="#Notifications/0.22.1280.710@0.22.1280.710" timestamp="1589186362769" />
-    <state x="232" y="22" key="CommitChangelistDialog2" timestamp="1589208628048">
+    <state x="232" y="22" key="CommitChangelistDialog2" timestamp="1589226304186">
       <screen x="0" y="22" width="1280" height="710" />
     </state>
-    <state x="232" y="22" key="CommitChangelistDialog2/0.22.1280.710@0.22.1280.710" timestamp="1589208628048" />
+    <state x="232" y="22" key="CommitChangelistDialog2/0.22.1280.710@0.22.1280.710" timestamp="1589226304186" />
     <state x="497" y="282" key="Github.ShareDialog" timestamp="1589187840914">
       <screen x="0" y="22" width="1280" height="710" />
     </state>
     <state x="497" y="282" key="Github.ShareDialog/0.22.1280.710@0.22.1280.710" timestamp="1589187840914" />
-    <state width="1239" height="162" key="GridCell.Tab.0.bottom" timestamp="1589187317316">
+    <state width="1239" height="162" key="GridCell.Tab.0.bottom" timestamp="1589273178050">
       <screen x="0" y="22" width="1280" height="710" />
     </state>
-    <state width="1239" height="162" key="GridCell.Tab.0.bottom/0.22.1280.710@0.22.1280.710" timestamp="1589187317316" />
-    <state width="1239" height="162" key="GridCell.Tab.0.center" timestamp="1589187317315">
+    <state width="1239" height="162" key="GridCell.Tab.0.bottom/0.22.1280.710@0.22.1280.710" timestamp="1589273178050" />
+    <state width="1239" height="162" key="GridCell.Tab.0.center" timestamp="1589273178049">
       <screen x="0" y="22" width="1280" height="710" />
     </state>
-    <state width="1239" height="162" key="GridCell.Tab.0.center/0.22.1280.710@0.22.1280.710" timestamp="1589187317315" />
-    <state width="1239" height="162" key="GridCell.Tab.0.left" timestamp="1589187317313">
+    <state width="1239" height="162" key="GridCell.Tab.0.center/0.22.1280.710@0.22.1280.710" timestamp="1589273178049" />
+    <state width="1239" height="162" key="GridCell.Tab.0.left" timestamp="1589273178048">
       <screen x="0" y="22" width="1280" height="710" />
     </state>
-    <state width="1239" height="162" key="GridCell.Tab.0.left/0.22.1280.710@0.22.1280.710" timestamp="1589187317313" />
-    <state width="1239" height="162" key="GridCell.Tab.0.right" timestamp="1589187317315">
+    <state width="1239" height="162" key="GridCell.Tab.0.left/0.22.1280.710@0.22.1280.710" timestamp="1589273178048" />
+    <state width="1239" height="162" key="GridCell.Tab.0.right" timestamp="1589273178049">
       <screen x="0" y="22" width="1280" height="710" />
     </state>
-    <state width="1239" height="162" key="GridCell.Tab.0.right/0.22.1280.710@0.22.1280.710" timestamp="1589187317315" />
+    <state width="1239" height="162" key="GridCell.Tab.0.right/0.22.1280.710@0.22.1280.710" timestamp="1589273178049" />
     <state x="149" y="22" width="982" height="710" key="SettingsEditor" timestamp="1589186456309">
       <screen x="0" y="22" width="1280" height="710" />
     </state>
     <state x="149" y="22" width="982" height="710" key="SettingsEditor/0.22.1280.710@0.22.1280.710" timestamp="1589186456309" />
-    <state x="240" y="118" key="Vcs.Push.Dialog.v2" timestamp="1589208654433">
+    <state x="240" y="118" key="Vcs.Push.Dialog.v2" timestamp="1589226315141">
       <screen x="0" y="22" width="1280" height="710" />
     </state>
-    <state x="240" y="118" key="Vcs.Push.Dialog.v2/0.22.1280.710@0.22.1280.710" timestamp="1589208654433" />
+    <state x="240" y="118" key="Vcs.Push.Dialog.v2/0.22.1280.710@0.22.1280.710" timestamp="1589226315141" />
     <state x="305" y="56" width="670" height="676" key="search.everywhere.popup" timestamp="1589223922780">
       <screen x="0" y="22" width="1280" height="710" />
     </state>

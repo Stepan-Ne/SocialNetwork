@@ -8,16 +8,16 @@ const NavBar = () => {
             <div className={s.itemMenu}>
 
                 <div className={s.item}>
-                    <a href='#'>Profile</a>
+                    <a href='/profile'>Profile</a>
                 </div>
                 <div className={s.item}>
-                    <a href='#'>Messages</a>
+                    <a href='/dialogs'>Messages</a>
                 </div>
                 <div className={s.item}>
-                    <a href='#'>News</a>
+                    <a href='/news'>News</a>
                 </div>
                 <div className={s.item}>
-                    <a href='#'>Settings</a>
+                    <a href='/settings'>Settings</a>
                 </div>
             </div>
 

@@ -14,7 +14,8 @@ const Profile = () => {
                 ava + description
             </div>
             <MyPosts/>
-            <Post />
+            <Post message='How are you?' likesCount='12'/>
+            <Post message='See you!' likesCount='8' />
 
 
         </div>
