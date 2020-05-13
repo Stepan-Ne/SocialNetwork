@@ -17,3 +17,6 @@
     color: dodgerblue;
     padding-left: 1em;
 }
+.itemMenu a.active {
+    color: firebrick;
+}

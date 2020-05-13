@@ -1,5 +1,6 @@
 import React from "react";
 import s from './NavBar.module.css'
+import {NavLink} from "react-router-dom";
 
 const NavBar = () => {
     return (
@@ -8,16 +9,16 @@ const NavBar = () => {
             <div className={s.itemMenu}>
 
                 <div className={s.item}>
-                    <a href='/profile'>Profile</a>
+                    <NavLink to='/profile' activeClassName={s.active}>Profile</NavLink>
                 </div>
                 <div className={s.item}>
-                    <a href='/dialogs'>Messages</a>
+                    <NavLink to='/dialogs' activeClassName={s.active}>Messages</NavLink>
                 </div>
                 <div className={s.item}>
-                    <a href='/news'>News</a>
+                    <NavLink to='/news' activeClassName={s.active}>News</NavLink>
                 </div>
                 <div className={s.item}>
-                    <a href='/settings'>Settings</a>
+                    <NavLink to='/settings' activeClassName={s.active}>Settings</NavLink>
                 </div>
             </div>
 
