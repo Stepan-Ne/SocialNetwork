@@ -1,3 +1,10 @@
-.item {
-
+.profileblock {
+    padding: 1em;
+}
+.btn div {
+    display: inline-block;
+    padding: 5px;
+}
+.btn button:hover {
+    background-color: lightskyblue;
 }

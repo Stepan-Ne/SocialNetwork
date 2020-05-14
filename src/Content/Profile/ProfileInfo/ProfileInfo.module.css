@@ -1,0 +1,9 @@
+.profile {
+    /*grid-area: c;*/
+    /*background-color: cornsilk;*/
+}
+img {
+    height: 200px;
+    overflow:hidden;
+    width:100%;
+}
