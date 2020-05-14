@@ -8,3 +8,9 @@ padding: 10px;
 .messages {
 padding: 10px;
 }
+.dialog {
+    margin: 1em;
+}
+.messages div {
+    margin: 1em;
+}
