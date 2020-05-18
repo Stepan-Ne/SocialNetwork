@@ -5,12 +5,9 @@ import ProfileInfo from "../ProfileInfo/ProfileInfo";
 
 
 
-const MyPosts = () => {
-    let postData = [
-        {id: 1, message: 'How are you?', likesCount: '12'},
-        {id: 2, message: 'See you!', likesCount: '8'}
-    ]
-    let postElements = postData
+const MyPosts = (props) => {
+
+    let postElements = props.postData
         .map( message => <Post message={message.message} likesCount={message.likesCount}/> )
     return (
         <div>
