@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7af95ff3-02ac-4c2d-b269-b57bc81a8c16" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Redux/state.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Content/Dialogs/Dialogs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Content/Dialogs/Dialogs.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Content/Profile/MyPosts/MyPosts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Content/Profile/MyPosts/MyPosts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Content/Profile/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Content/Profile/Profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Redux/state.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/state.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,7 +81,7 @@
       <workItem from="1589185053350" duration="1378000" />
       <workItem from="1589186909409" duration="13907000" />
       <workItem from="1589273490223" duration="1331000" />
-      <workItem from="1589379696765" duration="16354000" />
+      <workItem from="1589379696765" duration="20661000" />
     </task>
     <task id="LOCAL-00001" summary="Add components navbar, header and profile">
       <created>1589208629086</created>
@@ -140,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589467094288</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="state.js was added to the Redux folder.">
+      <created>1589780286930</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1589780286930</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,17 +174,19 @@
     <MESSAGE value="Add &lt;NavLink to='/dialogs/(1-3)'&gt;name&lt;/NavLink&gt;" />
     <MESSAGE value="Added component Profile.Info" />
     <MESSAGE value="Added subcomponents" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added subcomponents" />
+    <MESSAGE value="Added state.js" />
+    <MESSAGE value="state.js was added to the Redux folder." />
+    <option name="LAST_COMMIT_MESSAGE" value="state.js was added to the Redux folder." />
   </component>
   <component name="WindowStateProjectService">
     <state x="240" y="44" key="#Notifications" timestamp="1589186362769">
       <screen x="0" y="22" width="1280" height="710" />
     </state>
     <state x="240" y="44" key="#Notifications/0.22.1280.710@0.22.1280.710" timestamp="1589186362769" />
-    <state x="232" y="22" key="CommitChangelistDialog2" timestamp="1589467093709">
+    <state x="232" y="22" key="CommitChangelistDialog2" timestamp="1589780286062">
       <screen x="0" y="22" width="1280" height="710" />
     </state>
-    <state x="232" y="22" key="CommitChangelistDialog2/0.22.1280.710@0.22.1280.710" timestamp="1589467093709" />
+    <state x="232" y="22" key="CommitChangelistDialog2/0.22.1280.710@0.22.1280.710" timestamp="1589780286062" />
     <state x="497" y="282" key="Github.ShareDialog" timestamp="1589187840914">
       <screen x="0" y="22" width="1280" height="710" />
     </state>
@@ -251,25 +259,13 @@
       <screen x="0" y="22" width="1280" height="710" />
     </state>
     <state x="149" y="22" width="982" height="710" key="SettingsEditor/0.22.1280.710@0.22.1280.710" timestamp="1589186456309" />
-    <state x="240" y="118" key="Vcs.Push.Dialog.v2" timestamp="1589467101992">
+    <state x="240" y="118" key="Vcs.Push.Dialog.v2" timestamp="1589780295328">
       <screen x="0" y="22" width="1280" height="710" />
     </state>
-    <state x="240" y="118" key="Vcs.Push.Dialog.v2/0.22.1280.710@0.22.1280.710" timestamp="1589467101992" />
+    <state x="240" y="118" key="Vcs.Push.Dialog.v2/0.22.1280.710@0.22.1280.710" timestamp="1589780295328" />
     <state x="305" y="56" width="670" height="676" key="search.everywhere.popup" timestamp="1589223922780">
       <screen x="0" y="22" width="1280" height="710" />
     </state>
     <state x="305" y="56" width="670" height="676" key="search.everywhere.popup/0.22.1280.710@0.22.1280.710" timestamp="1589223922780" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/Content/Profile/MyPosts/MyPosts.js</url>
-          <line>1</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

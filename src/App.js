@@ -11,13 +11,13 @@ import Settings from "./Content/Settings/Settings";
 
 function App(props) {
     return (
-        <BrowserRouter>
+
         <div className='app-wrapper'>
             <Header/>
             <NavBar/>
             <div className='app-wrapper-content'>
                 <Route path='/profile'
-                       render={ () => <Profile state={props.state.profilePage}/>}/>
+                       render={ () => <Profile state={props.state.profilePage} addPost={props.addPost}/>}/>
                 <Route path='/dialogs'
                        render={ () => <Dialogs state={props.state.dialogsPage}/>}/>
                 <Route path='/news' component={News}/>
@@ -25,7 +25,7 @@ function App(props) {
             </div>
 
         </div>
-        </BrowserRouter>
+
     );
 }
 

@@ -6,6 +6,15 @@ import ProfileInfo from "../ProfileInfo/ProfileInfo";
 
 
 const MyPosts = (props) => {
+//create link to the textarea (React works with Virtual DOM)
+    //this link we connect to textarea with ref={}
+    let newPostElement = React.createRef(); //textarea
+    let addPost = () => {                   //buton
+        debugger;
+        let text = newPostElement.current.value;
+        props.addPost(text);
+    }
+
 
     let postElements = props.postData
         .map( message => <Post message={message.message} likesCount={message.likesCount}/> )
@@ -14,10 +23,10 @@ const MyPosts = (props) => {
 
             <div className={s.profileblock}>
                 <h3>My Posts</h3>
-                <textarea></textarea>
+                <textarea ref={newPostElement}></textarea>
                 <div className={s.btn}>
                     <div>
-                        <button>Add Post</button>
+                        <button onClick={addPost}>Add Post</button>
                     </div>
 
                     <div>
