@@ -10,9 +10,9 @@ const MyPosts = (props) => {
     //this link we connect to textarea with ref={}
     let newPostElement = React.createRef(); //textarea
     let addPost = () => {                   //buton
-        debugger;
         let text = newPostElement.current.value;
         props.addPost(text);
+        newPostElement.current.value = '';
     }
 
 
