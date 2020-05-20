@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7af95ff3-02ac-4c2d-b269-b57bc81a8c16" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/render.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Content/Profile/MyPosts/MyPosts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Content/Profile/MyPosts/MyPosts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Content/Profile/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Content/Profile/Profile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Redux/state.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/state.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/render.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/render.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +82,7 @@
       <workItem from="1589186909409" duration="13907000" />
       <workItem from="1589273490223" duration="1331000" />
       <workItem from="1589379696765" duration="21306000" />
-      <workItem from="1589952215532" duration="2998000" />
+      <workItem from="1589952215532" duration="7202000" />
     </task>
     <task id="LOCAL-00001" summary="Add components navbar, header and profile">
       <created>1589208629086</created>
@@ -153,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589882085886</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Was added render.js that we realise flux.">
+      <created>1589960031293</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1589960031293</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,17 +192,18 @@
     <MESSAGE value="Added state.js" />
     <MESSAGE value="state.js was added to the Redux folder." />
     <MESSAGE value="The callback function &quot;addPost&quot; with props is colled when the button 'add Post' is clicked." />
-    <option name="LAST_COMMIT_MESSAGE" value="The callback function &quot;addPost&quot; with props is colled when the button 'add Post' is clicked." />
+    <MESSAGE value="Was added render.js that we realise flux." />
+    <option name="LAST_COMMIT_MESSAGE" value="Was added render.js that we realise flux." />
   </component>
   <component name="WindowStateProjectService">
     <state x="240" y="44" key="#Notifications" timestamp="1589186362769">
       <screen x="0" y="22" width="1280" height="710" />
     </state>
     <state x="240" y="44" key="#Notifications/0.22.1280.710@0.22.1280.710" timestamp="1589186362769" />
-    <state x="232" y="22" key="CommitChangelistDialog2" timestamp="1589882085106">
+    <state x="45" y="22" key="CommitChangelistDialog2" timestamp="1589960030100">
       <screen x="0" y="22" width="1280" height="710" />
     </state>
-    <state x="232" y="22" key="CommitChangelistDialog2/0.22.1280.710@0.22.1280.710" timestamp="1589882085106" />
+    <state x="45" y="22" key="CommitChangelistDialog2/0.22.1280.710@0.22.1280.710" timestamp="1589960030100" />
     <state x="497" y="282" key="Github.ShareDialog" timestamp="1589187840914">
       <screen x="0" y="22" width="1280" height="710" />
     </state>
@@ -283,10 +292,10 @@
       <screen x="0" y="22" width="1280" height="710" />
     </state>
     <state x="149" y="22" width="982" height="710" key="SettingsEditor/0.22.1280.710@0.22.1280.710" timestamp="1589186456309" />
-    <state x="240" y="118" key="Vcs.Push.Dialog.v2" timestamp="1589882096239">
+    <state x="240" y="118" key="Vcs.Push.Dialog.v2" timestamp="1589960042286">
       <screen x="0" y="22" width="1280" height="710" />
     </state>
-    <state x="240" y="118" key="Vcs.Push.Dialog.v2/0.22.1280.710@0.22.1280.710" timestamp="1589882096239" />
+    <state x="240" y="118" key="Vcs.Push.Dialog.v2/0.22.1280.710@0.22.1280.710" timestamp="1589960042286" />
     <state x="305" y="56" width="670" height="676" key="search.everywhere.popup" timestamp="1589223922780">
       <screen x="0" y="22" width="1280" height="710" />
     </state>
