@@ -2,6 +2,7 @@ import React from "react";
 import s from './MyPosts.module.css'
 import Post from "./Post/Post";
 import ProfileInfo from "../ProfileInfo/ProfileInfo";
+import {addPostActionCreator, updateNewPostTextActionCreator} from "../../../Redux/state";
 
 
 
@@ -10,8 +11,8 @@ const MyPosts = (props) => {
     //this link we connect to textarea with ref={}
     let newPostElement = React.createRef(); //textarea
     let addPost = () => {
-        debugger;
-        props.dispatch({type: 'ADD-POST'}); //обработчик события для элемента внутри компоненты - button
+        props.dispatch(addPostActionCreator());
+        //props.dispatch({type: 'ADD-POST'}); //обработчик события для элемента внутри компоненты - button
     }
 
     let postElements = props.postData
@@ -19,7 +20,7 @@ const MyPosts = (props) => {
 
     let newTextPost = () => {
         let text = newPostElement.current.value;
-        props.dispatch({type: 'UPDATE-NEW-POST-TEXT', newText: text}); //обработчик события в textarea
+        props.dispatch(updateNewPostTextActionCreator(text)); //обработчик события в textarea
     }
 
     return (
