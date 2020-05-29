@@ -3,9 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="7af95ff3-02ac-4c2d-b269-b57bc81a8c16" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Content/Profile/MyPosts/MyPosts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Content/Profile/MyPosts/MyPosts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Content/Profile/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Content/Profile/Profile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Redux/state.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/state.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/render.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +83,9 @@
       <workItem from="1589273490223" duration="1331000" />
       <workItem from="1589379696765" duration="21306000" />
       <workItem from="1589952215532" duration="7661000" />
-      <workItem from="1590581595363" duration="2747000" />
+      <workItem from="1590581595363" duration="3465000" />
+      <workItem from="1590658598230" duration="7947000" />
+      <workItem from="1590746305065" duration="3476000" />
     </task>
     <task id="LOCAL-00001" summary="Add components navbar, header and profile">
       <created>1589208629086</created>
@@ -167,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589996251271</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="was added pattern 'observer' (f.e. onChange, onClick) into state.js.">
+      <created>1590594393898</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1590594393898</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,7 +211,8 @@
     <MESSAGE value="The callback function &quot;addPost&quot; with props is colled when the button 'add Post' is clicked." />
     <MESSAGE value="Was added render.js that we realise flux." />
     <MESSAGE value="FLUX - круговорот на каждый символ в textarea." />
-    <option name="LAST_COMMIT_MESSAGE" value="FLUX - круговорот на каждый символ в textarea." />
+    <MESSAGE value="was added pattern 'observer' (f.e. onChange, onClick) into state.js." />
+    <option name="LAST_COMMIT_MESSAGE" value="was added pattern 'observer' (f.e. onChange, onClick) into state.js." />
   </component>
   <component name="WindowStateProjectService">
     <state x="240" y="44" key="#Notifications" timestamp="1589186362769">
@@ -211,10 +223,10 @@
       <screen x="0" y="22" width="1280" height="710" />
     </state>
     <state x="378" y="132" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.22.1280.710@0.22.1280.710" timestamp="1590591585883" />
-    <state x="45" y="22" key="CommitChangelistDialog2" timestamp="1589996250368">
+    <state x="45" y="22" key="CommitChangelistDialog2" timestamp="1590594392846">
       <screen x="0" y="22" width="1280" height="710" />
     </state>
-    <state x="45" y="22" key="CommitChangelistDialog2/0.22.1280.710@0.22.1280.710" timestamp="1589996250368" />
+    <state x="45" y="22" key="CommitChangelistDialog2/0.22.1280.710@0.22.1280.710" timestamp="1590594392846" />
     <state x="497" y="282" key="Github.ShareDialog" timestamp="1589187840914">
       <screen x="0" y="22" width="1280" height="710" />
     </state>
@@ -303,10 +315,10 @@
       <screen x="0" y="22" width="1280" height="710" />
     </state>
     <state x="149" y="22" width="982" height="710" key="SettingsEditor/0.22.1280.710@0.22.1280.710" timestamp="1589186456309" />
-    <state x="240" y="118" key="Vcs.Push.Dialog.v2" timestamp="1589996257131">
+    <state x="240" y="118" key="Vcs.Push.Dialog.v2" timestamp="1590594409266">
       <screen x="0" y="22" width="1280" height="710" />
     </state>
-    <state x="240" y="118" key="Vcs.Push.Dialog.v2/0.22.1280.710@0.22.1280.710" timestamp="1589996257131" />
+    <state x="240" y="118" key="Vcs.Push.Dialog.v2/0.22.1280.710@0.22.1280.710" timestamp="1590594409266" />
     <state x="305" y="56" width="670" height="676" key="search.everywhere.popup" timestamp="1589223922780">
       <screen x="0" y="22" width="1280" height="710" />
     </state>
