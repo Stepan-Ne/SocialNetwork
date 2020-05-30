@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7af95ff3-02ac-4c2d-b269-b57bc81a8c16" name="Default Changelist" comment="" />
+    <list default="true" id="7af95ff3-02ac-4c2d-b269-b57bc81a8c16" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Content/Dialogs/Dialogs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Content/Dialogs/Dialogs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Content/Dialogs/Dialogs.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Content/Dialogs/Dialogs.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Redux/state.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/state.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,6 +86,7 @@
       <workItem from="1590581595363" duration="3465000" />
       <workItem from="1590658598230" duration="7947000" />
       <workItem from="1590746305065" duration="6949000" />
+      <workItem from="1590784051419" duration="7579000" />
     </task>
     <task id="LOCAL-00001" summary="Add components navbar, header and profile">
       <created>1589208629086</created>
@@ -186,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590774585059</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="action creator">
+      <created>1590784180260</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1590784180260</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,10 +247,11 @@
       <screen x="0" y="22" width="1280" height="710" />
     </state>
     <state x="378" y="132" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.22.1280.710@0.22.1280.710" timestamp="1590591585883" />
-    <state x="0" y="22" key="CommitChangelistDialog2" timestamp="1590774584480">
-      <screen x="0" y="22" width="1280" height="710" />
+    <state x="0" y="22" key="CommitChangelistDialog2" timestamp="1590784176344">
+      <screen x="0" y="22" width="1280" height="715" />
     </state>
     <state x="0" y="22" key="CommitChangelistDialog2/0.22.1280.710@0.22.1280.710" timestamp="1590774584480" />
+    <state x="0" y="22" key="CommitChangelistDialog2/0.22.1280.715@0.22.1280.715" timestamp="1590784176344" />
     <state x="497" y="282" key="Github.ShareDialog" timestamp="1589187840914">
       <screen x="0" y="22" width="1280" height="710" />
     </state>
@@ -325,13 +340,15 @@
       <screen x="0" y="22" width="1280" height="710" />
     </state>
     <state x="149" y="22" width="982" height="710" key="SettingsEditor/0.22.1280.710@0.22.1280.710" timestamp="1589186456309" />
-    <state x="240" y="118" key="Vcs.Push.Dialog.v2" timestamp="1590594409266">
-      <screen x="0" y="22" width="1280" height="710" />
+    <state x="240" y="119" key="Vcs.Push.Dialog.v2" timestamp="1590784229686">
+      <screen x="0" y="22" width="1280" height="715" />
     </state>
     <state x="240" y="118" key="Vcs.Push.Dialog.v2/0.22.1280.710@0.22.1280.710" timestamp="1590594409266" />
-    <state x="305" y="56" width="670" height="676" key="search.everywhere.popup" timestamp="1589223922780">
-      <screen x="0" y="22" width="1280" height="710" />
+    <state x="240" y="119" key="Vcs.Push.Dialog.v2/0.22.1280.715@0.22.1280.715" timestamp="1590784229686" />
+    <state x="305" y="56" width="670" height="681" key="search.everywhere.popup" timestamp="1590858949787">
+      <screen x="0" y="22" width="1280" height="715" />
     </state>
     <state x="305" y="56" width="670" height="676" key="search.everywhere.popup/0.22.1280.710@0.22.1280.710" timestamp="1589223922780" />
+    <state x="305" y="56" width="670" height="681" key="search.everywhere.popup/0.22.1280.715@0.22.1280.715" timestamp="1590858949787" />
   </component>
 </project>

@@ -14,3 +14,15 @@ padding: 10px;
 .messages div {
     margin: 1em;
 }
+
+/*Send message block*/
+
+.textarea {
+    margin: 1em;
+}
+.sendMessage {
+    margin: 1em;
+}
+.sendMessage button:hover {
+    background-color: lightskyblue;
+}
