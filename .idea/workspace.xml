@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7af95ff3-02ac-4c2d-b269-b57bc81a8c16" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Redux/dialogs-reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Redux/profile-reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Redux/sideBar-reducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Content/Dialogs/Dialogs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Content/Dialogs/Dialogs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Content/Dialogs/Dialogs.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Content/Dialogs/Dialogs.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Redux/state.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/state.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,7 +36,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.last.introduce.type" value="CONST" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Content/Dialogs/DialogsItem" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Redux" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -46,6 +47,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Redux" />
       <recent name="$PROJECT_DIR$/src/Content/Dialogs/DialogsItem" />
       <recent name="$PROJECT_DIR$/src/Content/Dialogs/Message" />
       <recent name="$PROJECT_DIR$/src/Content/Profile/ProfileInfo" />
@@ -86,7 +88,7 @@
       <workItem from="1590658598230" duration="7947000" />
       <workItem from="1590746305065" duration="6949000" />
       <workItem from="1590784051419" duration="7867000" />
-      <workItem from="1591252861188" duration="6538000" />
+      <workItem from="1591252861188" duration="12232000" />
     </task>
     <task id="LOCAL-00001" summary="Add components navbar, header and profile">
       <created>1589208629086</created>
@@ -207,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590862732934</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="There were edded textarea and sendMessage to Dialogs.js.">
+      <created>1591286712944</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1591286712944</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,7 +253,8 @@
     <MESSAGE value="The dispatch method allows to change _store and it`s the way to realise interface of _store. dispatch(action) where  the action is  an object which has type='name of action' and may has other parametrs this action." />
     <MESSAGE value="action creator" />
     <MESSAGE value="There was added function updateNewMessageData into Dialogs.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="There was added function updateNewMessageData into Dialogs.js" />
+    <MESSAGE value="There were edded textarea and sendMessage to Dialogs.js." />
+    <option name="LAST_COMMIT_MESSAGE" value="There were edded textarea and sendMessage to Dialogs.js." />
   </component>
   <component name="WindowStateProjectService">
     <state x="240" y="44" key="#Notifications" timestamp="1589186362769">
@@ -255,10 +265,10 @@
       <screen x="0" y="22" width="1280" height="710" />
     </state>
     <state x="378" y="132" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.22.1280.710@0.22.1280.710" timestamp="1590591585883" />
-    <state x="0" y="22" key="CommitChangelistDialog2" timestamp="1590862731982">
-      <screen x="0" y="22" width="1280" height="715" />
+    <state x="0" y="22" key="CommitChangelistDialog2" timestamp="1591286701337">
+      <screen x="0" y="22" width="1280" height="710" />
     </state>
-    <state x="0" y="22" key="CommitChangelistDialog2/0.22.1280.710@0.22.1280.710" timestamp="1590774584480" />
+    <state x="0" y="22" key="CommitChangelistDialog2/0.22.1280.710@0.22.1280.710" timestamp="1591286701337" />
     <state x="0" y="22" key="CommitChangelistDialog2/0.22.1280.715@0.22.1280.715" timestamp="1590862731982" />
     <state x="497" y="282" key="Github.ShareDialog" timestamp="1589187840914">
       <screen x="0" y="22" width="1280" height="710" />
@@ -348,10 +358,10 @@
       <screen x="0" y="22" width="1280" height="710" />
     </state>
     <state x="149" y="22" width="982" height="710" key="SettingsEditor/0.22.1280.710@0.22.1280.710" timestamp="1589186456309" />
-    <state x="240" y="119" key="Vcs.Push.Dialog.v2" timestamp="1590862745450">
-      <screen x="0" y="22" width="1280" height="715" />
+    <state x="240" y="118" key="Vcs.Push.Dialog.v2" timestamp="1591286740205">
+      <screen x="0" y="22" width="1280" height="710" />
     </state>
-    <state x="240" y="118" key="Vcs.Push.Dialog.v2/0.22.1280.710@0.22.1280.710" timestamp="1590594409266" />
+    <state x="240" y="118" key="Vcs.Push.Dialog.v2/0.22.1280.710@0.22.1280.710" timestamp="1591286740205" />
     <state x="240" y="119" key="Vcs.Push.Dialog.v2/0.22.1280.715@0.22.1280.715" timestamp="1590862745450" />
     <state x="429" y="301" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591286628058">
       <screen x="0" y="22" width="1280" height="710" />
