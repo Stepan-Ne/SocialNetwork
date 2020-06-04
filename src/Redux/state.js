@@ -1,8 +1,9 @@
 const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 
-const ADD_MESSAGE = 'ADD-MESSAGE';
+const SEND_MESSAGE = 'ADD-MESSAGE';
 const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT';
+
 
 //store._state.dialogsPage.newMessageText;
 
@@ -28,7 +29,7 @@ let store = {
                 {id: 2, message: 'How are you?'},
                 {id: 3, message: 'Hello everybody!'}
             ],
-            newMessageText: 'I like JS'
+            newMessageText: ''
         }
     }, //private
     _callSubscriber() {
@@ -75,6 +76,14 @@ let store = {
         } else if (action.type === UPDATE_NEW_MESSAGE_TEXT) {
             this._state.dialogsPage.newMessageText = action.newText;
             this._callSubscriber(this._state);
+        } else if (action.type === SEND_MESSAGE) {
+            let newMessage = {
+                id: 8,
+                message: this._state.dialogsPage.newMessageText //new..Text updated when user was typing
+            };
+            this._state.dialogsPage.messagesData.push(newMessage);
+            this._state.dialogsPage.newMessageText = '';
+            this._callSubscriber(this._state);
         }
 
     }
@@ -85,6 +94,7 @@ export const addPostActionCreator = () => ({type: ADD_POST})
 export const updateNewPostTextActionCreator = (text) => ({type: UPDATE_NEW_POST_TEXT, newText: text})
 
 //New message
+export const sendMessageActionCreator = () => ({type:SEND_MESSAGE})
 export const updateNewMessageTextActionCreator = (text) => ({type: UPDATE_NEW_MESSAGE_TEXT, newText: text})
 
 window.store = store;

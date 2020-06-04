@@ -4,6 +4,8 @@ display: grid;
 }
 .dialogsItems {
 padding: 10px;
+    text-decoration: none;
+
 }
 .messages {
 padding: 10px;
