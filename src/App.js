@@ -10,6 +10,7 @@ import News from "./Content/News/News";
 import Settings from "./Content/Settings/Settings";
 
 function App(props) {
+    debugger;
     return (
 
         <div className='app-wrapper'>
