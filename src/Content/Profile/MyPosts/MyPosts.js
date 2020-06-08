@@ -10,9 +10,8 @@ const MyPosts = (props) => {
 //create link to the textarea (React works with Virtual DOM)
     //this link we connect to textarea with ref={}
     let newPostElement = React.createRef(); //textarea
-    let addPost = () => {
-        props.dispatch(addPostActionCreator());
-        //props.dispatch({type: 'ADD-POST'}); //обработчик события для элемента внутри компоненты - button
+    let onAddPost = () => {
+        props.addPost();
     }
 
     let postElements = props.postData
@@ -20,7 +19,8 @@ const MyPosts = (props) => {
 
     let newTextPost = () => {
         let text = newPostElement.current.value;
-        props.dispatch(updateNewPostTextActionCreator(text)); //обработчик события в textarea
+        props.updateNewPostText(text); //call-back
+
     }
 
     return (
@@ -32,7 +32,7 @@ const MyPosts = (props) => {
                 <textarea ref={newPostElement} onChange={newTextPost} value={props.newPostText} />
                 <div className={s.btn}>
                     <div>
-                        <button onClick={addPost}>Add Post</button>
+                        <button onClick={onAddPost}>Add Post</button>
                     </div>
 
                     <div>

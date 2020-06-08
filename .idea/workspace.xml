@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7af95ff3-02ac-4c2d-b269-b57bc81a8c16" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Redux/redux-store.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Content/Profile/MyPosts/MyPostsContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/dialogs-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/dialogs-reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/profile-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/profile-reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/sideBar-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/sideBar-reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/state.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Content/Profile/MyPosts/MyPosts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Content/Profile/MyPosts/MyPosts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Content/Profile/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Content/Profile/Profile.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +35,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.last.introduce.type" value="CONST" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Redux" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Content/Profile/MyPosts" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -52,11 +46,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Content/Profile/MyPosts" />
       <recent name="$PROJECT_DIR$/src/Redux" />
       <recent name="$PROJECT_DIR$/src/Content/Dialogs/DialogsItem" />
       <recent name="$PROJECT_DIR$/src/Content/Dialogs/Message" />
       <recent name="$PROJECT_DIR$/src/Content/Profile/ProfileInfo" />
-      <recent name="$PROJECT_DIR$/src/Content/News" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -94,7 +88,8 @@
       <workItem from="1590746305065" duration="6949000" />
       <workItem from="1590784051419" duration="7867000" />
       <workItem from="1591252861188" duration="12232000" />
-      <workItem from="1591365985842" duration="3126000" />
+      <workItem from="1591365985842" duration="3199000" />
+      <workItem from="1591625880085" duration="2943000" />
     </task>
     <task id="LOCAL-00001" summary="Add components navbar, header and profile">
       <created>1589208629086</created>
@@ -222,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591286712944</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="There was added redux-store.js">
+      <created>1591371883446</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1591371883446</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,7 +262,8 @@
     <MESSAGE value="action creator" />
     <MESSAGE value="There was added function updateNewMessageData into Dialogs.js" />
     <MESSAGE value="There were edded textarea and sendMessage to Dialogs.js." />
-    <option name="LAST_COMMIT_MESSAGE" value="There were edded textarea and sendMessage to Dialogs.js." />
+    <MESSAGE value="There was added redux-store.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="There was added redux-store.js" />
   </component>
   <component name="WindowStateProjectService">
     <state x="240" y="44" key="#Notifications" timestamp="1589186362769">
@@ -271,10 +274,10 @@
       <screen x="0" y="22" width="1280" height="710" />
     </state>
     <state x="378" y="132" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.22.1280.710@0.22.1280.710" timestamp="1590591585883" />
-    <state x="0" y="22" key="CommitChangelistDialog2" timestamp="1591286701337">
+    <state x="0" y="22" key="CommitChangelistDialog2" timestamp="1591371881988">
       <screen x="0" y="22" width="1280" height="710" />
     </state>
-    <state x="0" y="22" key="CommitChangelistDialog2/0.22.1280.710@0.22.1280.710" timestamp="1591286701337" />
+    <state x="0" y="22" key="CommitChangelistDialog2/0.22.1280.710@0.22.1280.710" timestamp="1591371881988" />
     <state x="0" y="22" key="CommitChangelistDialog2/0.22.1280.715@0.22.1280.715" timestamp="1590862731982" />
     <state x="497" y="282" key="Github.ShareDialog" timestamp="1589187840914">
       <screen x="0" y="22" width="1280" height="710" />
@@ -364,10 +367,10 @@
       <screen x="0" y="22" width="1280" height="710" />
     </state>
     <state x="149" y="22" width="982" height="710" key="SettingsEditor/0.22.1280.710@0.22.1280.710" timestamp="1589186456309" />
-    <state x="240" y="118" key="Vcs.Push.Dialog.v2" timestamp="1591286740205">
+    <state x="240" y="118" key="Vcs.Push.Dialog.v2" timestamp="1591371895763">
       <screen x="0" y="22" width="1280" height="710" />
     </state>
-    <state x="240" y="118" key="Vcs.Push.Dialog.v2/0.22.1280.710@0.22.1280.710" timestamp="1591286740205" />
+    <state x="240" y="118" key="Vcs.Push.Dialog.v2/0.22.1280.710@0.22.1280.710" timestamp="1591371895763" />
     <state x="240" y="119" key="Vcs.Push.Dialog.v2/0.22.1280.715@0.22.1280.715" timestamp="1590862745450" />
     <state x="429" y="301" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591286628058">
       <screen x="0" y="22" width="1280" height="710" />
