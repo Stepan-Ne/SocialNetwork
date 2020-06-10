@@ -10,18 +10,18 @@ const MyPosts = (props) => {
 //create link to the textarea (React works with Virtual DOM)
     //this link we connect to textarea with ref={}
     let newPostElement = React.createRef(); //textarea
+    let newTextPost = () => {
+        let text = newPostElement.current.value;
+        props.updateNewPostText(text); //call-back
+
+    }
+
     let onAddPost = () => {
         props.addPost();
     }
 
     let postElements = props.postData
         .map( message => <Post message={message.message} likesCount={message.likesCount}/> );
-
-    let newTextPost = () => {
-        let text = newPostElement.current.value;
-        props.updateNewPostText(text); //call-back
-
-    }
 
     return (
         <div>
