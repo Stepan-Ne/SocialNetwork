@@ -14,14 +14,22 @@ let initialState = {
 const profileReducer = (state = initialState, action) => {
 
     switch (action.type) {
-        case ADD_POST:
+        case ADD_POST: {
             let newPostBody = state.newPostText;
-            state.newPostText = '';
-            state.postData.push({id: 5, message: newPostBody, likesCount: 0});
-            break;
-        case UPDATE_NEW_POST_TEXT:
-            state.newPostText = action.newText;
-            break;
+            //пришел новый стейт при вводе, но мы не имеем права менять объект
+            //connect сравнивает не объекты, а их содерживое - развернуть объект
+            //и создать его копию
+            let stateCopy = {...state}; //поверхностная копия
+            stateCopy.postData = [...state.postData]; //глубокая копия
+            stateCopy.postData.push({id: 5, message: newPostBody, likesCount: 0});
+            stateCopy.newPostText = '';
+            return stateCopy;
+        }
+        case UPDATE_NEW_POST_TEXT: {
+            let stateCopy = {...state}
+            stateCopy.newPostText = action.newText;
+            return stateCopy;
+        }
     }
     return state;
 }
