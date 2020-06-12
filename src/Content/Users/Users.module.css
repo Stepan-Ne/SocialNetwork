@@ -1,0 +1,14 @@
+.userBlock .value {
+    display: inline-block;
+    margin: 1em;
+
+}
+.userBlock {
+    border: 1px solid dodgerblue;
+    border-radius: 10px;
+    margin: 1em;
+}
+.status {
+    display: block;
+    margin: 1em;
+}
