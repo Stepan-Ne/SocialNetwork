@@ -1,7 +1,8 @@
 .header {
-grid-area: h;
+    grid-area: h;
     background-color: lightsalmon;
 }
+
 .txt {
     text-align: center;
 }
