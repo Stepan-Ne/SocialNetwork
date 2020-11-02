@@ -7,7 +7,7 @@ import {Route} from "react-router-dom";
 import News from "./Content/News/News";
 import Settings from "./Content/Settings/Settings";
 import DialogsContainer from "./Content/Dialogs/DialogsContainer";
-import UsersContainer from "./Content/Users/UsersContainer"
+import UsersContainerConnect from "./Content/Users/UsersContainerConnect"
 function App(props) {
     return (
 
@@ -19,7 +19,7 @@ function App(props) {
                 <Route path='/dialogs' render={ () => <DialogsContainer />}/>
                 <Route path='/news' component={News}/>
                 <Route path='/settings' component={Settings}/>
-                <Route path='/users' render={() => <UsersContainer />}/>
+                <Route path='/users' render={() => <UsersContainerConnect />}/>
             </div>
 
         </div>
