@@ -5,13 +5,15 @@ const SET_USERS = 'SET_USERS';
 const PREV_PAGE = 'PREV_PAGE';
 const NEXT_PAGE = 'NEXT_PAGE';
 const SET_TOTAL_USERS_COUNT = 'SET_TOTAL_USERS_COUNT';
+const IS_FETCHING = 'IS_FETCHING';
 //at first our state will be empty and we get respons from server and after that it will
 //be set this state
 let initialState = {
     users: [ ],
     currentPage: 1,
     totalUsersCount: 0,
-    pageSize: 5
+    pageSize: 5,
+    loading: false
 };
 
 const usersReducer = (state = initialState, action) => {
@@ -60,6 +62,11 @@ const usersReducer = (state = initialState, action) => {
                 ...state,
                 totalUsersCount: action.totalUsers
             };
+        case IS_FETCHING:
+            return {
+                ...state,
+                loading: action.loading
+            }
         default:
             return state;
 
@@ -72,5 +79,6 @@ export const setUsersAC = (users) => ({type: SET_USERS, users});
 export const prevPageAC = () => ({type: PREV_PAGE});
 export const nextPageAC = () => ({type: NEXT_PAGE});
 export const setTotalUsersCountAC = (totalUsers) => ({type: SET_TOTAL_USERS_COUNT, totalUsers});
+export const isFetchingAC = (loading) => ({type: IS_FETCHING, loading});
 
 export default usersReducer;

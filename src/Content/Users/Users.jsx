@@ -10,10 +10,20 @@ const Users = (props) => {
     return <div>
         <div>{pagesCount}</div>
 
-        <button disabled={props.currentPage === 1 ? true : false}
-                onClick={() => props.prev(props.currentPage)}>Prev</button>
-        <span> {props.currentPage} </span>
-        <button onClick={() => props.next(props.currentPage)}>Next</button>
+        <div>
+            <button disabled={props.currentPage === 1 ? true : false}
+                    onClick={() => props.prev(props.currentPage)}>Prev
+            </button>
+            <span> {props.currentPage} </span>
+            <button onClick={() => props.next(props.currentPage)}>Next</button>
+        </div>
+
+        <div className={ props.loading ? s.ldsRing : ''}>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
 
         {
             props.users.map(u => <div key={u.id} className={s.userBlock}>
@@ -24,9 +34,13 @@ const Users = (props) => {
                 <div className={s.value}>{"u.location.region"}</div>
                 <div className={s.value}>{"u.location.city"}</div>
                 <div>
-                    { u.followed
-                        ? <button onClick={() => {props.unfollow(u.id)}}>Unfollow</button>
-                        : <button onClick={() => {props.follow(u.id)}}>Followed</button>
+                    {u.followed
+                        ? <button onClick={() => {
+                            props.unfollow(u.id)
+                        }}>Unfollow</button>
+                        : <button onClick={() => {
+                            props.follow(u.id)
+                        }}>Followed</button>
 
                     }
                 </div>
