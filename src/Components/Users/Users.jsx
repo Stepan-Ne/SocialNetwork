@@ -1,6 +1,7 @@
 import React from "react";
 import s from "./Users.module.css";
 import userPhoto from "../img/user.png";
+import Preloader from "../Common/Preloader/preloader";
 
 
 const Users = (props) => {
@@ -18,12 +19,7 @@ const Users = (props) => {
             <button onClick={() => props.next(props.currentPage)}>Next</button>
         </div>
 
-        <div className={ props.loading ? s.ldsRing : ''}>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
+        <Preloader loading={props.loading}/>
 
         {
             props.users.map(u => <div key={u.id} className={s.userBlock}>

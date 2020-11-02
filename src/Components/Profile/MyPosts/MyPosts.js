@@ -1,10 +1,6 @@
 import React from "react";
 import s from './MyPosts.module.css'
 import Post from "./Post/Post";
-import ProfileInfo from "../ProfileInfo/ProfileInfo";
-import {addPostActionCreator, updateNewPostTextActionCreator} from "../../../Redux/profile-reducer";
-
-
 
 const MyPosts = (props) => {
 //create link to the textarea (React works with Virtual DOM)
@@ -14,11 +10,11 @@ const MyPosts = (props) => {
         let text = newPostElement.current.value;
         props.updateNewPostText(text); //call-back
 
-    }
+    };
 
     let onAddPost = () => {
         props.addPost();
-    }
+    };
 
     let postElements = props.postData
         .map( message => <Post message={message.message} key={message.id}
@@ -47,6 +43,6 @@ const MyPosts = (props) => {
             </div>
         </div>
     );
-}
+};
 
 export default MyPosts;

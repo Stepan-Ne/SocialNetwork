@@ -6,6 +6,6 @@ const Settings = () => {
            Settings
         </div>
     )
-}
+};
 
 export default Settings;

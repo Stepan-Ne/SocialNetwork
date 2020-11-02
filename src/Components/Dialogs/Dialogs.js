@@ -2,10 +2,6 @@ import React from "react";
 import s from './Dialogs.module.css'
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
-import {sendMessageActionCreator, updateNewMessageTextActionCreator} from "../../Redux/dialogs-reducer";
-
-
-
 
 const Dialogs = (props) => {
 
@@ -18,11 +14,11 @@ const Dialogs = (props) => {
         props.updateNewMessageText(text);
         //props.dispatch(updateNewMessageTextActionCreator(text));
 
-    }
+    };
     //send message
     let sendMessage = () => {
         props.sendMessage();
-    }
+    };
 
 
     //create elements on page
@@ -53,6 +49,6 @@ const Dialogs = (props) => {
 
         </div>
     );
-}
+};
 
 export default Dialogs;

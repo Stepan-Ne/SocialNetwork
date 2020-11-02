@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
-import Header from "./Content/Header/Header";
-import NavBar from "./Content/NavBar/NavBar";
-import Profile from "./Content/Profile/Profile";
+import Header from "./Components/Header/Header";
+import NavBar from "./Components/NavBar/NavBar";
+import Profile from "./Components/Profile/Profile";
 import {Route} from "react-router-dom";
-import News from "./Content/News/News";
-import Settings from "./Content/Settings/Settings";
-import DialogsContainer from "./Content/Dialogs/DialogsContainer";
-import UsersContainerConnect from "./Content/Users/UsersContainerConnect"
+import News from "./Components/News/News";
+import Settings from "./Components/Settings/Settings";
+import DialogsContainer from "./Components/Dialogs/DialogsContainer";
+import UsersContainerConnect from "./Components/Users/UsersContainerConnect"
 function App(props) {
     return (
 

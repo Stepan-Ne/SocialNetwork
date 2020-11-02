@@ -9,7 +9,7 @@ let initialState = {
     ],
     newPostText: 'I like JS'
 
-}
+};
 
 const profileReducer = (state = initialState, action) => {
 
@@ -33,9 +33,9 @@ const profileReducer = (state = initialState, action) => {
         default:
             return state;
     }
-}
+};
 //New Post
-export const addPostActionCreator = () => ({type: ADD_POST})
-export const updateNewPostTextActionCreator = (text) => ({type: UPDATE_NEW_POST_TEXT, newText: text})
+export const addPostActionCreator = () => ({type: ADD_POST});
+export const updateNewPostTextActionCreator = (text) => ({type: UPDATE_NEW_POST_TEXT, newText: text});
 export default profileReducer;
 

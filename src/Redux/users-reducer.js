@@ -66,7 +66,7 @@ const usersReducer = (state = initialState, action) => {
             return {
                 ...state,
                 loading: action.loading
-            }
+            };
         default:
             return state;
 
