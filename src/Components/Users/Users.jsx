@@ -2,6 +2,7 @@ import React from "react";
 import s from "./Users.module.css";
 import userPhoto from "../img/user.png";
 import Preloader from "../Common/Preloader/preloader";
+import {NavLink} from "react-router-dom";
 
 
 const Users = (props) => {
@@ -24,7 +25,9 @@ const Users = (props) => {
         {
             props.users.map(u => <div key={u.id} className={s.userBlock}>
                 <div className={s.value}>
-                    <img className={s.imgPerson} alt='logo' src={userPhoto}/>
+                    <NavLink to={'/profile/' + u.id}>
+                        <img className={s.imgPerson} alt='logo' src={userPhoto}/>
+                    </NavLink>
                 </div>
                 <div className={s.value}>{u.name}</div>
                 <div className={s.value}>{"u.location.region"}</div>

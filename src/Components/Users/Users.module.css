@@ -22,6 +22,9 @@
     width: 100px;
     height: 100px;
 }
+.imgPerson:hover {
+    border: 1px solid dodgerblue;
+}
 .btns {
     display: flex;
     border: 1px solid dodgerblue;
