@@ -9,17 +9,17 @@ const Users = (props) => {
     let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
 
     return <div>
-        <div>{pagesCount}</div>
 
-        <div>
+        <div className={s.btns}>
+            <div>{pagesCount}</div>
             <button disabled={props.currentPage === 1 ? true : false}
-                    onClick={() => props.prev(props.currentPage)}>Prev
+                    onClick={() => props.prevPage(props.currentPage)}>Prev
             </button>
             <span> {props.currentPage} </span>
-            <button onClick={() => props.next(props.currentPage)}>Next</button>
-        </div>
+            <button onClick={() => props.nextPage(props.currentPage)}>Next</button>
 
-        <Preloader loading={props.loading}/>
+            <Preloader loading={props.loading}/>
+        </div>
 
         {
             props.users.map(u => <div key={u.id} className={s.userBlock}>
