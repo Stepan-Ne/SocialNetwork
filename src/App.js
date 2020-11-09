@@ -15,7 +15,7 @@ function App(props) {
             <Header/>
             <NavBar/>
             <div className='app-wrapper-content'>
-                <Route path='/profile' render={ () => <ProfilecontainerConnect />}/>
+                <Route path='/profile/:userId?' render={ () => <ProfilecontainerConnect />}/>
                 <Route path='/dialogs' render={ () => <DialogsContainer />}/>
                 <Route path='/news' component={News}/>
                 <Route path='/settings' component={Settings}/>
