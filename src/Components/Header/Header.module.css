@@ -6,3 +6,11 @@
 .txt {
     text-align: center;
 }
+.loginBlock {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-right: 1rem;
+}
+.loginBlock a {
+    color: white;
+}
