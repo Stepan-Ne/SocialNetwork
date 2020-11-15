@@ -6,6 +6,7 @@ const PREV_PAGE = 'PREV_PAGE';
 const NEXT_PAGE = 'NEXT_PAGE';
 const SET_TOTAL_USERS_COUNT = 'SET_TOTAL_USERS_COUNT';
 const IS_FETCHING = 'IS_FETCHING';
+
 //at first our state will be empty and we get respons from server and after that it will
 //be set this state
 let initialState = {
@@ -74,6 +75,7 @@ const usersReducer = (state = initialState, action) => {
 };
 
 //Action Creators
+
 export const follow = (userId) => ({type: FOLLOW, userId});
 export const unfollow = (userId) => ({type: UNFOLLOW, userId});
 export const setUsers = (users) => ({type: SET_USERS, users});
