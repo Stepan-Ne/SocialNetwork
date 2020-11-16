@@ -6,6 +6,7 @@ const PREV_PAGE = 'PREV_PAGE';
 const NEXT_PAGE = 'NEXT_PAGE';
 const SET_TOTAL_USERS_COUNT = 'SET_TOTAL_USERS_COUNT';
 const IS_FETCHING = 'IS_FETCHING';
+const FOLLOWING_PROGRESS = 'FOLLOWING_PROGRESS';
 
 //at first our state will be empty and we get respons from server and after that it will
 //be set this state
@@ -14,7 +15,8 @@ let initialState = {
     currentPage: 1,
     totalUsersCount: 0,
     pageSize: 5,
-    loading: false
+    loading: false,
+    usersIdfollowingProgress: []
 };
 
 const usersReducer = (state = initialState, action) => {
@@ -68,6 +70,13 @@ const usersReducer = (state = initialState, action) => {
                 ...state,
                 loading: action.loading
             };
+            case FOLLOWING_PROGRESS:
+                return {
+                    ...state,
+                    usersIdfollowingProgress: action.isFetching
+                    ? [...state.usersIdfollowingProgress, action.userFollowingProgressId]
+                    : state.usersIdfollowingProgress.filter(uId => uId != action.userFollowingProgressId)
+                }
         default:
             return state;
 
@@ -83,5 +92,7 @@ export const prevPage = () => ({type: PREV_PAGE});
 export const nextPage = () => ({type: NEXT_PAGE});
 export const setTotalUsersCount = (totalUsers) => ({type: SET_TOTAL_USERS_COUNT, totalUsers});
 export const isFetching = (loading) => ({type: IS_FETCHING, loading});
+export const followingInProgres = (userFollowingProgressId, isFetching) => ({type: FOLLOWING_PROGRESS,
+     userFollowingProgressId, isFetching})
 
 export default usersReducer;

@@ -7,7 +7,8 @@ import {
     unfollow,
     nextPage,
     prevPage,
-    setTotalUsersCount, isFetching
+    setTotalUsersCount, isFetching,
+    followingInProgres
 } from "../../Redux/users-reducer";
 import Users from "./Users";
 import {usersAPI} from '../api/api';
@@ -53,6 +54,8 @@ class UsersContainer extends React.Component {
     render() {
         return <Users prevPage={this.prevPage}
                       nextPage={this.nextPage}
+                      usersIdfollowingProgress={this.props.usersIdfollowingProgress}
+                      followingInProgres={this.props.followingInProgres}
                       totalUsersCount={this.props.totalUsersCount}
                       pageSize={this.props.pageSize}
                       currentPage={this.props.currentPage}
@@ -65,12 +68,14 @@ class UsersContainer extends React.Component {
 
 //Container second level
 const mapStateToProps = (state) => {
+   
     return {
         users: state.usersPage.users,
         currentPage: state.usersPage.currentPage,
         totalUsersCount: state.usersPage.totalUsersCount,
         pageSize: state.usersPage.pageSize,
-        loading: state.usersPage.loading
+        loading: state.usersPage.loading,
+        usersIdfollowingProgress: state.usersPage.usersIdfollowingProgress
     }
 };
 
@@ -81,7 +86,8 @@ const objectForMapDispatch = {
     nextPage,
     prevPage,
     setTotalUsersCount,
-    isFetching
+    isFetching,
+    followingInProgres
 };
 
 const UsersContainerConnect = connect(mapStateToProps, objectForMapDispatch)(UsersContainer);
