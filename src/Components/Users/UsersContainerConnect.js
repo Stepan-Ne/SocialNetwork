@@ -11,6 +11,7 @@ import {
 } from "../../Redux/users-reducer";
 import * as axios from "axios";
 import Users from "./Users";
+import {usersAPI} from '../api/api';
 
 //Container first level
 class UsersContainer extends React.Component {
@@ -18,9 +19,7 @@ class UsersContainer extends React.Component {
     componentDidMount() {
         this.props.isFetching(true);
         const size = this.props.pageSize;
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${size}`, {
-            withCredentials: true
-        })
+        usersAPI.getUsers(this.props.currentPage, size)
             .then(response => {
                 this.props.isFetching(false);
                 this.props.setTotalUsersCount(response.data.totalCount);
@@ -33,9 +32,7 @@ class UsersContainer extends React.Component {
         const size = this.props.pageSize;
         let p = --page;
         this.props.prevPage();
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${p}&count=${size}`, {
-            withCredentials: true
-        })
+        usersAPI.getUsers(p, size)
             .then(response => {
                 this.props.isFetching(false);
                 this.props.setUsers(response.data.items)
@@ -46,7 +43,7 @@ class UsersContainer extends React.Component {
         const size = this.props.pageSize;
         let p = ++page;
         this.props.nextPage();
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${p}&count=${size}`)
+        usersAPI.getUsers(p, size)
             .then(response => {
                 this.props.isFetching(false);
                 this.props.setUsers(response.data.items)
