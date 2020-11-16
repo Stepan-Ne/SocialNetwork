@@ -9,7 +9,6 @@ import {
     prevPage,
     setTotalUsersCount, isFetching
 } from "../../Redux/users-reducer";
-import * as axios from "axios";
 import Users from "./Users";
 import {usersAPI} from '../api/api';
 
