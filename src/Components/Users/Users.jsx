@@ -5,27 +5,22 @@ import Preloader from '../Common/Preloader/preloader';
 import { NavLink } from 'react-router-dom';
 import { usersAPI } from '../api/api';
 
-const Users = (props) => {
-  let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
 
+const Users = (props) => {
+  
+  let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
+  let pageNum = []
+  for (let i = 1; i <= pagesCount / 100; i++) {
+    pageNum.push(i)
+  }
   return (
     <div>
       <div className={s.btns}>
-        <div>{pagesCount}</div>
-        <button
-          disabled={props.currentPage === 1 ? true : false}
-          onClick={() => props.prevPage(props.currentPage)}
-        >
-          Prev
-        </button>
-        <span> {props.currentPage} </span>
-        <button onClick={() => props.nextPage(props.currentPage)}>Next</button>
-
-        <Preloader loading={props.loading} />
+      {pageNum.map(p => <button onClick={() => props.onPageChanged(p)} key={p}>{p}</button>)}
+      <div><Preloader loading={props.loading} /></div>
       </div>
-
+      
       {props.users.map((u) => (
-         
         <div key={u.id} className={s.userBlock}>
              <User {...u} {...props}/>
           
@@ -43,10 +38,7 @@ const User = (props) => {
             </NavLink>
           </div>
           <div className={s.value}>{props.name}</div>
-          <div className={s.value}></div>
-          <div className={s.value}>{'u.location.city'}</div>
           <FollowUnfollowButtons {...props}/>
-          <div className={s.status}>!!!{props.status}</div>
     </>
 };
 
@@ -56,33 +48,29 @@ const FollowUnfollowButtons = (props) => {
     {props.followed ? (
       <button disabled={props.usersIdfollowingProgress.some(uId => uId === props.id)}
         onClick={() => {
-            props.followingInProgres(props.id, true);
-          usersAPI.deleteUsers(props.id).then((response) => {
-            props.followingInProgres(props.id, false);
-            if (response.data.resultCode === 0) {
-              props.unfollow(props.id);
-            }
-          });
+          props.unfollow(props.id)
+          //   props.followingInProgres(props.id, true);
+          // usersAPI.deleteUsers(props.id).then((response) => {
+          //   props.followingInProgres(props.id, false);
+          //   if (response.data.resultCode === 0) {
+          //     props.unfollow(props.id);
+          //   }
+          // });
         }}
-      >
-        Unfollow
-      </button>
+      >Unfollow</button>
     ) : (
       <button disabled={props.usersIdfollowingProgress.some(uId => uId === props.id)}
-    
         onClick={() => {
-        
-            props.followingInProgres(props.id, true);
-          usersAPI.postUsers(props.id).then((response) => {
-            props.followingInProgres(props.id, false);
-            if (response.data.resultCode === 0) {
-              props.follow(props.id);
-            }
-          });
+          props.follow(props.id)
+          //   props.followingInProgres(props.id, true);
+          // usersAPI.postUsers(props.id).then((response) => {
+          //   props.followingInProgres(props.id, false);
+          //   if (response.data.resultCode === 0) {
+          //     props.follow(props.id);
+          //   }
+          // });
         }}
-      >
-        Follow
-      </button>
+      >Follow</button>
     )}
   </div>
 }

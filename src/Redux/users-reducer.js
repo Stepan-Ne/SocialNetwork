@@ -4,8 +4,7 @@ import {usersAPI} from '../Components/api/api'
 const FOLLOW = 'FOLLOW';
 const UNFOLLOW = 'UNFOLLOW';
 const SET_USERS = 'SET_USERS';
-const PREV_PAGE = 'PREV_PAGE';
-const NEXT_PAGE = 'NEXT_PAGE';
+const SET_CURRENT_PAGE = 'SET_CURRENT_PAGE';
 const SET_TOTAL_USERS_COUNT = 'SET_TOTAL_USERS_COUNT';
 const IS_FETCHING = 'IS_FETCHING';
 const FOLLOWING_PROGRESS = 'FOLLOWING_PROGRESS';
@@ -49,18 +48,10 @@ const usersReducer = (state = initialState, action) => {
                 ...state,
                 users: [...action.users]
             };
-        case PREV_PAGE:
-             if (state.currentPage > 1) {
-                return {
-                    ...state,
-                    currentPage: --state.currentPage,
-                }
-            };
-        case NEXT_PAGE:
+        case SET_CURRENT_PAGE:
             return {
                 ...state,
-                currentPage: ++state.currentPage,
-                disabled: false
+                currentPage: action.pageNumber
             };
         case SET_TOTAL_USERS_COUNT:
             return {
@@ -87,11 +78,10 @@ const usersReducer = (state = initialState, action) => {
 
 //Action Creators
 
-export const follow = (userId) => ({type: FOLLOW, userId});
-export const unfollow = (userId) => ({type: UNFOLLOW, userId});
+export const followSuccess = (userId) => ({type: FOLLOW, userId});
+export const unfollowSuccess = (userId) => ({type: UNFOLLOW, userId});
 export const setUsers = (users) => ({type: SET_USERS, users});
-export const prevPage = () => ({type: PREV_PAGE});
-export const nextPage = () => ({type: NEXT_PAGE});
+export const setCurrentPage = (pageNumber) => ({type: SET_CURRENT_PAGE, pageNumber});
 export const setTotalUsersCount = (totalUsers) => ({type: SET_TOTAL_USERS_COUNT, totalUsers});
 export const isFetching = (loading) => ({type: IS_FETCHING, loading});
 export const followingInProgres = (userFollowingProgressId, isFetching) => ({type: FOLLOWING_PROGRESS,
@@ -99,7 +89,7 @@ export const followingInProgres = (userFollowingProgressId, isFetching) => ({typ
 
 //Thunk
 
-export const thunkUsersCreator = (currentPage, pageSize) => {
+export const getUsers = (currentPage, pageSize) => {
     return (dispatch) => {
         dispatch(isFetching(true));
             usersAPI.getUsers(currentPage, pageSize)
@@ -110,5 +100,28 @@ export const thunkUsersCreator = (currentPage, pageSize) => {
                 })
     }
     
-} 
+};
+export const unfollow = (userId) => {
+    return (dispatch) => {
+        dispatch(followingInProgres(userId, true));
+        usersAPI.deleteUsers(userId).then((response) => {
+            dispatch(followingInProgres(userId, false));
+          if (response.data.resultCode === 0) {
+            dispatch(unfollowSuccess(userId));
+          }
+        });
+      }
+    };
+    export const follow = (userId) => {
+        return (dispatch) => {
+            dispatch(followingInProgres(userId, true));
+          usersAPI.postUsers(userId).then((response) => {
+            dispatch(followingInProgres(userId, false));
+            if (response.data.resultCode === 0) {
+                dispatch(followSuccess(userId));
+            }
+          });
+          }
+        };
+
 export default usersReducer;

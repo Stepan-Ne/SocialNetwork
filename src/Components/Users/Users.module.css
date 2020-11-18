@@ -25,17 +25,9 @@
 .imgPerson:hover {
     border: 1px solid dodgerblue;
 }
-.btns {
-    display: flex;
-    border: 1px solid dodgerblue;
-    border-radius: 10px;
-    min-height: 3rem;
-    margin: 1em;
+.btns > div {
+   display: inline-block;
+    margin: .5rem;
     padding: .5rem
 }
-.btns > div {
-    margin: 1rem;
-}
-.btns > button {
-  margin: 0 1rem;
-}
+
