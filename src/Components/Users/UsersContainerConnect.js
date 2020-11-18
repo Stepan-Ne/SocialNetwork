@@ -8,7 +8,8 @@ import {
     nextPage,
     prevPage,
     setTotalUsersCount, isFetching,
-    followingInProgres
+    followingInProgres,
+    thunkUsersCreator
 } from "../../Redux/users-reducer";
 import Users from "./Users";
 import {usersAPI} from '../api/api';
@@ -17,14 +18,14 @@ import {usersAPI} from '../api/api';
 class UsersContainer extends React.Component {
 
     componentDidMount() {
-        this.props.isFetching(true);
-        const size = this.props.pageSize;
-        usersAPI.getUsers(this.props.currentPage, size)
-            .then(response => {
-                this.props.isFetching(false);
-                this.props.setTotalUsersCount(response.data.totalCount);
-                this.props.setUsers(response.data.items)
-            })
+        this.props.thunkUsersCreator(this.props.currentPage, this.props.pageSize);
+        // this.props.isFetching(true);
+        // usersAPI.getUsers(this.props.currentPage, this.props.pageSize)
+        //     .then(response => {
+        //         this.props.isFetching(false);
+        //         this.props.setTotalUsersCount(response.data.totalCount);
+        //         this.props.setUsers(response.data.items)
+        //     })
     }
 
     prevPage = (page) => {
@@ -87,7 +88,8 @@ const objectForMapDispatch = {
     prevPage,
     setTotalUsersCount,
     isFetching,
-    followingInProgres
+    followingInProgres,
+    thunkUsersCreator
 };
 
 const UsersContainerConnect = connect(mapStateToProps, objectForMapDispatch)(UsersContainer);
