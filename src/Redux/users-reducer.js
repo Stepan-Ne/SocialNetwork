@@ -78,13 +78,13 @@ const usersReducer = (state = initialState, action) => {
 
 //Action Creators
 
-export const followSuccess = (userId) => ({type: FOLLOW, userId});
-export const unfollowSuccess = (userId) => ({type: UNFOLLOW, userId});
-export const setUsers = (users) => ({type: SET_USERS, users});
+const followSuccess = (userId) => ({type: FOLLOW, userId});
+const unfollowSuccess = (userId) => ({type: UNFOLLOW, userId});
+const setUsers = (users) => ({type: SET_USERS, users});
 export const setCurrentPage = (pageNumber) => ({type: SET_CURRENT_PAGE, pageNumber});
-export const setTotalUsersCount = (totalUsers) => ({type: SET_TOTAL_USERS_COUNT, totalUsers});
-export const isFetching = (loading) => ({type: IS_FETCHING, loading});
-export const followingInProgres = (userFollowingProgressId, isFetching) => ({type: FOLLOWING_PROGRESS,
+const setTotalUsersCount = (totalUsers) => ({type: SET_TOTAL_USERS_COUNT, totalUsers});
+const isFetching = (loading) => ({type: IS_FETCHING, loading});
+const followingInProgres = (userFollowingProgressId, isFetching) => ({type: FOLLOWING_PROGRESS,
      userFollowingProgressId, isFetching});
 
 //Thunk

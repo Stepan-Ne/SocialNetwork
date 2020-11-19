@@ -15,10 +15,7 @@ class Profilecontainer extends React.Component {
         if (!userId) {
             userId = 2;
         }
-        usersAPI.getProfile(userId)
-            .then(response => {
-               this.props.setUserProfile(response.data)
-            })
+        this.props.setUserProfile(userId);
     }
 
     render() {

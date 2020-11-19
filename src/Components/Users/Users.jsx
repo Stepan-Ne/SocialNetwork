@@ -3,7 +3,7 @@ import s from './Users.module.css';
 import userPhoto from '../img/user.png';
 import Preloader from '../Common/Preloader/preloader';
 import { NavLink } from 'react-router-dom';
-import { usersAPI } from '../api/api';
+
 
 
 const Users = (props) => {
@@ -48,27 +48,13 @@ const FollowUnfollowButtons = (props) => {
     {props.followed ? (
       <button disabled={props.usersIdfollowingProgress.some(uId => uId === props.id)}
         onClick={() => {
-          props.unfollow(props.id)
-          //   props.followingInProgres(props.id, true);
-          // usersAPI.deleteUsers(props.id).then((response) => {
-          //   props.followingInProgres(props.id, false);
-          //   if (response.data.resultCode === 0) {
-          //     props.unfollow(props.id);
-          //   }
-          // });
+          props.unfollow(props.id);
         }}
       >Unfollow</button>
     ) : (
       <button disabled={props.usersIdfollowingProgress.some(uId => uId === props.id)}
         onClick={() => {
-          props.follow(props.id)
-          //   props.followingInProgres(props.id, true);
-          // usersAPI.postUsers(props.id).then((response) => {
-          //   props.followingInProgres(props.id, false);
-          //   if (response.data.resultCode === 0) {
-          //     props.follow(props.id);
-          //   }
-          // });
+          props.follow(props.id);
         }}
       >Follow</button>
     )}
