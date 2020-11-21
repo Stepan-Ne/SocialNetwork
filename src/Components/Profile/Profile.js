@@ -21,8 +21,6 @@ class Profilecontainer extends React.Component {
     }
 
     render() {
-        //Redirect
-        //if (!this.props.isAuth) return <Redirect to='/login'/>
         return (
             <div className={s.profile}>
                 <ProfileInfo {...this.props}/>
@@ -43,7 +41,7 @@ const objectForMapDispatch = {
 
 
 export default compose(
-    withAuthRedirect,
+   // withAuthRedirect,
     connect(mapStateToProps, objectForMapDispatch),
     withRouter
 )(Profilecontainer);

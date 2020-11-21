@@ -7,3 +7,9 @@ img {
    max-width: 200px;
 
 }
+.status {
+    background-color: skyblue;
+    margin-left: 1rem;
+    padding: .3rem 3rem;
+
+}
