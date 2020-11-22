@@ -3,11 +3,9 @@ import s from './Profile.module.css'
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
 import MyPostsContainer from "./MyPosts/MyPostsContainer";
 import {connect} from "react-redux";
-import {setUserProfile} from "../../Redux/profile-reducer";
-import { Redirect, withRouter } from "react-router-dom";
-import { usersAPI } from "../api/api";
+import {setUserProfile, setStatus, updateStatus} from "../../Redux/profile-reducer";
+import {  withRouter } from "react-router-dom";
 import { compose } from "redux";
-import withAuthRedirect from "../hoc/withAuthRedirect";
 
 
 class Profilecontainer extends React.Component {
@@ -18,6 +16,8 @@ class Profilecontainer extends React.Component {
             userId = 2;
         }
         this.props.setUserProfile(userId);
+        this.props.setStatus(userId)
+
     }
 
     render() {
@@ -32,11 +32,14 @@ class Profilecontainer extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        profile: state.profilePage.profile
+        profile: state.profilePage.profile,
+        status: state.profilePage.status
     }
 };
 const objectForMapDispatch = {
-    setUserProfile
+    setUserProfile,
+    setStatus,
+    updateStatus
 };
 
 
