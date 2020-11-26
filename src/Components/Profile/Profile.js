@@ -13,7 +13,7 @@ class Profilecontainer extends React.Component {
     componentDidMount() {
         let userId = this.props.match.params.userId;
         if (!userId) {
-            userId = 2;
+            userId = 12566;
         }
         this.props.setUserProfile(userId);
         this.props.setStatus(userId)
