@@ -27,6 +27,18 @@ export const usersAPI = {
   },
 };
 
+export const authAPI = {
+  authMe() {
+    return instance.get(`auth/me`);
+  },
+  logIn(email, password, rememberMe) {
+    return instance.post(`auth/login`, {email, password, rememberMe})
+  },
+  logOut() {
+    return instance.delete(`auth/login`);
+  }
+}
+
 export const profileAPI = {
   getProfile(userId) {
     return instance.get(`profile/` + userId);
