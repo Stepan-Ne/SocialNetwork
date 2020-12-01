@@ -5,6 +5,7 @@ import { required } from '../utils/validator';
 import { login } from '../../Redux/auth-reducer';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
+import s from '../Common/FormsControls/renderedField.module.css';
 
 const Login = (props) => {
 //debugger
@@ -38,9 +39,14 @@ const LoginForm = (props) => {
       <div>
         <Field name='rememberMy' component={Input} type='checkbox' />remember me
       </div>
+      {
+        props.error && <div className={s.commonErrorLoginForm}>
+        {props.error}
+      </div>
+      }
       <button>Log in</button>
     </form>
-  );
+  );  
 };
 
 const LoginReduxForm = reduxForm({form: 'login'})(LoginForm);
