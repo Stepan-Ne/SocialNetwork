@@ -29,9 +29,10 @@ const setAuthMeData = (id, email, login, isAuth) => ({
   data: { id, email, login, isAuth },
 });
 
+//if I autorized give me my data: id, email, login 
 export const setAuthUserData = () => {
   return (dispatch) => {
-    authAPI.authMe().then((response) => {
+    return authAPI.authMe().then((response) => {
       if (response.data.resultCode === 0) {
         let { id, email, login } = response.data.data;
         dispatch(setAuthMeData(id, email, login, true));

@@ -11,9 +11,13 @@ import { compose } from "redux";
 class Profilecontainer extends React.Component {
 
     componentDidMount() {
+        
         let userId = this.props.match.params.userId;
         if (!userId) {
-            userId = 12566;
+            userId = this.props.authorizedUserId;
+            if (!userId) {
+                this.props.history.push('/login')
+            }
         }
         this.props.setUserProfile(userId);
         this.props.setStatus(userId)
@@ -33,7 +37,9 @@ class Profilecontainer extends React.Component {
 const mapStateToProps = (state) => {
     return {
         profile: state.profilePage.profile,
-        status: state.profilePage.status
+        status: state.profilePage.status,
+        isAuth: state.auth.isAuth,
+        authorizedUserId: state.auth.id
     }
 };
 const objectForMapDispatch = {
@@ -45,6 +51,7 @@ const objectForMapDispatch = {
 
 export default compose(
    // withAuthRedirect,
-    connect(mapStateToProps, objectForMapDispatch),
-    withRouter
+   withRouter,
+    connect(mapStateToProps, objectForMapDispatch)
+    
 )(Profilecontainer);
