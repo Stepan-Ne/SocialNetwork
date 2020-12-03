@@ -6,6 +6,7 @@ import {
   setCurrentPage,
   getUsers,
 } from '../../Redux/users-reducer';
+import { getusers, getCurrentPage, getTotalUsersCount, getPageSize, getLoading, getUsersIdfollowingProgress } from '../../Redux/users-selectors';
 import Users from './Users';
 
 
@@ -37,12 +38,12 @@ class UsersContainer extends React.Component {
 //Container second level
 const mapStateToProps = (state) => {
   return {
-    users: state.usersPage.users,
-    currentPage: state.usersPage.currentPage,
-    totalUsersCount: state.usersPage.totalUsersCount,
-    pageSize: state.usersPage.pageSize,
-    loading: state.usersPage.loading,
-    usersIdfollowingProgress: state.usersPage.usersIdfollowingProgress,
+    users: getusers(state),
+    currentPage: getCurrentPage(state),
+    totalUsersCount: getTotalUsersCount(state),
+    pageSize: getPageSize(state),
+    loading: getLoading(state),
+    usersIdfollowingProgress: getUsersIdfollowingProgress(state),
   };
 };
 

@@ -89,10 +89,11 @@ const followingInProgres = (userFollowingProgressId, isFetching) => ({type: FOLL
 
 //Thunk
 
-export const getUsers = (currentPage, pageSize) => {
+export const getUsers = (pageNumber, pageSize) => {
     return (dispatch) => {
         dispatch(isFetching(true));
-            usersAPI.getUsers(currentPage, pageSize)
+        dispatch(setCurrentPage(pageNumber));
+            usersAPI.getUsers(pageNumber, pageSize)
                 .then(response => {
                     dispatch(isFetching(false));
                     dispatch(setTotalUsersCount(response.data.totalCount));
