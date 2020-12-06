@@ -8,23 +8,12 @@ import { Textarea } from '../../Common/FormsControls/FormsControls';
 const maxLength10 = maxLengthCreator(10);
 
 const MyPosts = (props) => {
-  //create link to the textarea (React works with Virtual DOM)
-  //this link we connect to textarea with ref={}
-  //let newPostElement = React.createRef(); //textarea
-  //   let newTextPost = () => {
-  //     let text = newPostElement.current.value;
-  //     props.updateNewPostText(text); //call-back
-  //   };
-
-  //   let onAddPost = () => {
-  //     props.addPost();
-  //   };
 
   const submit = (formData) => {
     props.addPostAC(formData.newPostText);
   };
 
-  let postElements = props.postData.map((message) => (
+  let postElements = [... props.postData].reverse().map((message) => (
     <Post
       message={message.message}
       key={message.id}
