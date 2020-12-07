@@ -90,17 +90,16 @@ const followingInProgres = (userFollowingProgressId, isFetching) => ({type: FOLL
 //Thunk
 
 export const getUsers = (pageNumber, pageSize) => {
-    return (dispatch) => {
+    return async (dispatch) => {
         dispatch(isFetching(true));
         dispatch(setCurrentPage(pageNumber));
-            usersAPI.getUsers(pageNumber, pageSize)
-                .then(response => {
+           let response = await usersAPI.getUsers(pageNumber, pageSize);
+            
                     dispatch(isFetching(false));
                     dispatch(setTotalUsersCount(response.data.totalCount));
                     dispatch(setUsers(response.data.items));
-                })
-    }
-    
+                
+    }  
 };
 export const unfollow = (userId) => {
     return (dispatch) => {

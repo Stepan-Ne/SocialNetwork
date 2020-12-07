@@ -1,25 +1,18 @@
 import React from 'react';
 import s from './Users.module.css';
 import userPhoto from '../img/user.png';
-import Preloader from '../Common/Preloader/preloader';
 import { NavLink } from 'react-router-dom';
+import Paginator from '../Common/Paginator/Paginator';
 
 
 
 const Users = (props) => {
   
-  let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
-  let pageNum = []
-  for (let i = 1; i <= pagesCount / 100; i++) {
-    pageNum.push(i)
-  }
   return (
     <div>
-      <div className={s.btns}>
-      {pageNum.map(p => <button onClick={() => props.onPageChanged(p)} key={p}>{p}</button>)}
-      <div><Preloader loading={props.loading} /></div>
-      </div>
-      
+      <Paginator totalUsersCount={props.totalUsersCount} pageSize={props.pageSize}
+       onPageChanged={props.onPageChanged} loading={props.loading}/>
+
       {props.users.map((u) => (
         <div key={u.id} className={s.userBlock}>
              <User {...u} {...props}/>

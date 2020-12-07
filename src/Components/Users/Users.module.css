@@ -25,9 +25,4 @@
 .imgPerson:hover {
     border: 1px solid dodgerblue;
 }
-.btns > div {
-   display: inline-block;
-    margin: .5rem;
-    padding: .5rem
-}
 
