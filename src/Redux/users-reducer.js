@@ -15,7 +15,7 @@ let initialState = {
     users: [ ],
     currentPage: 1,
     totalUsersCount: 0,
-    pageSize: 5,
+    pageSize: 15,
     loading: false,
     usersIdfollowingProgress: []
 };
@@ -99,7 +99,7 @@ export const getUsers = (pageNumber, pageSize) => {
                     dispatch(setTotalUsersCount(response.data.totalCount));
                     dispatch(setUsers(response.data.items));
                 
-    }  
+    }     
 };
 export const unfollow = (userId) => {
     return (dispatch) => {
