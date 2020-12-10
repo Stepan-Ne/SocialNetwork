@@ -50,7 +50,6 @@ const Paginator = ({
           </button>
         
       )}
-
       <span onClick={next}> NEXT </span>
       <Preloader loading={loading} />
     </div>

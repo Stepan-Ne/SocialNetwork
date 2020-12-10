@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import './App.css';
 import HeaderContainer from './Components/Header/HeaderContainer';
 import NavBar from './Components/NavBar/NavBar';
@@ -7,12 +7,13 @@ import { Route, withRouter } from 'react-router-dom';
 import News from './Components/News/News';
 import Settings from './Components/Settings/Settings';
 import DialogsContainer from './Components/Dialogs/DialogsContainer';
-import UsersContainerConnect from './Components/Users/UsersContainerConnect';
 import Login from './Components/Login/login';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { initApp } from './Redux/app-reducer';
 import Preloader from './Components/Common/Preloader/preloader';
+import withSuspense from './Components/hoc/withSuspense';
+const UsersContainerConnect = React.lazy(() => import('./Components/Users/UsersContainerConnect'));
 
 class App extends React.Component {
 
@@ -36,7 +37,7 @@ class App extends React.Component {
         <Route path='/dialogs' render={() => <DialogsContainer />} />
         <Route path='/news' component={News} />
         <Route path='/settings' component={Settings} />
-        <Route path='/users' render={() => <UsersContainerConnect />} />
+        <Route path='/users' render={withSuspense(UsersContainerConnect)} />
         <Route path='/login' render={() => <Login/>}/>
       </div>
     </div>
