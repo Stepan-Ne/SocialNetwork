@@ -41,6 +41,7 @@
     ]
   },
   "devDependencies": {
-    "csscomb": "^4.3.0"
+    "csscomb": "^4.3.0",
+    "react-test-renderer": "^17.0.1"
   }
 }
