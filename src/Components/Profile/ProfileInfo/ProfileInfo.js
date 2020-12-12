@@ -2,6 +2,7 @@ import React from 'react';
 import s from './ProfileInfo.module.css';
 import Preloader from '../../Common/Preloader/preloader';
 import StatusProfileHooks from './StatusProfileHooks';
+import userPhoto from '../../img/user.png'
 
 const ProfileInfo = (props) => {
   if (!props.profile) {
@@ -10,7 +11,10 @@ const ProfileInfo = (props) => {
     return (
         <div className={s.profile}>
           <div>
-            <img src={props.profile.photos.large} alt='profile' />
+            <img src={props.profile.photos.large || userPhoto} alt='profile' />
+          </div>
+          <div>
+            <input type="file"/>z
           </div>
     
           <div>
