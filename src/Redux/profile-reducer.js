@@ -5,6 +5,7 @@ const SET_USER_PROFILE = 'SET_USER_PROFILE';
 const SET_STATUS = 'SET_STATUS';
 const UPDATE_MY_STATUS = 'UPDATE_MY_STATUS';
 const DELETE_POST = 'DELETE_POST';
+const UPDATE_MY_IMAGE = 'UPDATE_MY_IMAGE';
 
 let initialState = {
   // app
@@ -28,11 +29,11 @@ const profileReducer = (state = initialState, action) => {
           { id: Date.now(), message: action.newPostText, likesCount: 0 },
         ],
       };
-      case DELETE_POST:
-        return {
-... state,
-postData: state.postData.filter(i => i.id !== action.postId)
-        };
+    case DELETE_POST:
+      return {
+        ...state,
+        postData: state.postData.filter((i) => i.id !== action.postId),
+      };
     case SET_USER_PROFILE:
       return {
         ...state,
@@ -43,11 +44,16 @@ postData: state.postData.filter(i => i.id !== action.postId)
         ...state,
         status: action.status,
       };
-      case UPDATE_MY_STATUS:
-          return {
-              ...state,
-              status: action.status
-          }
+    case UPDATE_MY_STATUS:
+      return {
+        ...state,
+        status: action.status,
+      };
+    case UPDATE_MY_IMAGE:
+      return {
+        ...state,
+        profile: { ...state.profile, photos: action.photos },
+      };
     default:
       return state;
   }
@@ -55,11 +61,12 @@ postData: state.postData.filter(i => i.id !== action.postId)
 
 // AC
 export const addPostAC = (newPostText) => ({ type: ADD_POST, newPostText });
-export const deletePostAC = (postId) => ({type: DELETE_POST, postId})
+export const deletePostAC = (postId) => ({ type: DELETE_POST, postId });
 
 const setUserProfileData = (profile) => ({ type: SET_USER_PROFILE, profile });
 const setProfileStatus = (status) => ({ type: SET_STATUS, status });
-const updateMyStatus = (status) => ({ type: UPDATE_MY_STATUS, status})
+const updateMyStatus = (status) => ({ type: UPDATE_MY_STATUS, status });
+const setImageProfileSuccess = (photos) => ({ type: UPDATE_MY_IMAGE, photos });
 
 // Thunk
 export const setUserProfile = (userId) => {
@@ -78,13 +85,22 @@ export const setStatus = (userId) => {
   };
 };
 export const updateStatus = (status) => {
-    return (dispatch => {
-        profileAPI.updateStatus(status).then(response => {
-            if (response.data.resultCode === 0) {
-                dispatch(updateMyStatus(status))
-            }
-        })
-    })
-}
+  return (dispatch) => {
+    profileAPI.updateStatus(status).then((response) => {
+      if (response.data.resultCode === 0) {
+        dispatch(updateMyStatus(status));
+      }
+    });
+  };
+};
+
+export const setImageProfile = (file) => (dispatch) => {
+  //dispatch(updateImageAC(file))
+  profileAPI.updateImage(file).then((response) => {
+    if (response.data.resultCode === 0) {
+      dispatch(setImageProfileSuccess(response.data.data.photos));
+    }
+  });
+};
 
 export default profileReducer;
