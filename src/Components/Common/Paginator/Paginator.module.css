@@ -6,3 +6,14 @@
  .active {
      background-color: skyblue;
  }
+ .prevNext {
+     border: 1px solid brown;
+     border-radius: 2px;
+     padding: 1px;
+ }
+ .prevNext:hover {
+background-color: yellowgreen;
+ }
+ .prevNext:active {
+     background-color: tomato;
+ }

@@ -38,7 +38,10 @@ const Paginator = ({
 
   return (
     <div className={s.btns}>
-      <span onClick={prev}> PREV </span>
+      {
+        portionNumber > 1 && <span className={s.prevNext} onClick={prev}> PREV </span>
+      }
+      
       {pageNum
       .filter(p => p >= left && p <= right
 // if the sequence number of pages is in the range of the given portion
@@ -50,7 +53,7 @@ const Paginator = ({
           </button>
         
       )}
-      <span onClick={next}> NEXT </span>
+      <span className={s.prevNext} onClick={next}> NEXT </span>
       <Preloader loading={loading} />
     </div>
   );
