@@ -3,8 +3,14 @@ import s from './ProfileInfo.module.css';
 import Preloader from '../../Common/Preloader/preloader';
 import StatusProfileHooks from './StatusProfileHooks';
 import userPhoto from '../../img/user.png';
+import Contacts from './Contacts';
 
 const ProfileInfo = (props) => {
+
+  const submit = (value) => {
+    console.log(value)
+  }
+  
   const chooseImage = (e) => {
     if (e.target.files.length) {
       props.setImageProfile(e.target.files[0]);
@@ -30,6 +36,7 @@ const ProfileInfo = (props) => {
           status={props.status}
           updateStatus={props.updateStatus}
         />
+        <Contacts onSubmit={submit} {...props.profile}/>
       </div>
     );
   }

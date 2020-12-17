@@ -12,3 +12,14 @@ img {
     padding: .3rem 3rem;
 
 }
+.contactForm {
+    width: 30%;
+    margin-top: 2rem;
+    background-color: skyblue;
+    margin-left: 1rem;
+    padding: .3rem 3rem;
+}
+.error {
+    color: red;
+    padding: .5rem;
+}
