@@ -1,16 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import s from './ProfileInfo.module.css';
 import Preloader from '../../Common/Preloader/preloader';
 import StatusProfileHooks from './StatusProfileHooks';
 import userPhoto from '../../img/user.png';
-import Contacts from './Contacts';
+import ContactsForm from './ContactsForm';
 
 const ProfileInfo = (props) => {
 
+  let [editMode, setEditMode] = useState(false);
   const submit = (value) => {
-    console.log(value)
-  }
-  
+    setEditMode(false)
+    console.log(value);
+  };
+
   const chooseImage = (e) => {
     if (e.target.files.length) {
       props.setImageProfile(e.target.files[0]);
@@ -36,10 +38,36 @@ const ProfileInfo = (props) => {
           status={props.status}
           updateStatus={props.updateStatus}
         />
-        <Contacts onSubmit={submit} {...props.profile}/>
+       {
+         editMode
+         ? <ContactsForm onSubmit={submit} {...props.profile} />
+         : <Contacts edit={() => setEditMode(true)} {...props.profile}/>
+       } 
+       
+
       </div>
     );
   }
+};
+
+const Contacts = (props) => {
+  const { contacts, lookingForAJob, aboutMe, edit, ...restProps } = props;
+
+  return (
+    <div  className={s.contactForm} >
+      <button onClick={edit}>Edit</button>
+      <div>
+      aboutMe: {aboutMe}
+      </div>
+      <div>
+      lookingForAJob: {lookingForAJob}
+      </div>
+      {contacts &&
+        Object.keys(contacts).map((key) => {
+          return <div key={key}>{key}: {contacts[key]}</div>;
+        })}
+    </div>
+  );
 };
 
 export default ProfileInfo;

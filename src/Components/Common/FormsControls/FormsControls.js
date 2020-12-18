@@ -1,9 +1,10 @@
 import React from 'react';
 import s from './renderedField.module.css';
 
-export const FormControl = ({input, meta, ...props}) => {
+export const FormControl = ({ meta, ...props }) => {
     return (
         <div className={meta.touched && meta.error ? s.formControl : ''}>
+            {props.label && <label>{props.label}</label>}
             {props.children}
             <div>
             {meta.touched && meta.error && 
