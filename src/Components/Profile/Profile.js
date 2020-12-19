@@ -8,6 +8,7 @@ import {
   setStatus,
   updateStatus,
   setImageProfile,
+  setContacts
 } from '../../Redux/profile-reducer';
 import { withRouter } from 'react-router-dom';
 import { compose } from 'redux';
@@ -59,6 +60,7 @@ const objectForMapDispatch = {
   setStatus,
   updateStatus,
   setImageProfile,
+  setContacts
 };
 
 export default compose(

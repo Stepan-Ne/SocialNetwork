@@ -1,3 +1,4 @@
+import { stopSubmit } from 'redux-form';
 import { usersAPI, profileAPI } from '../Components/api/api';
 
 const ADD_POST = 'ADD-POST';
@@ -6,6 +7,7 @@ const SET_STATUS = 'SET_STATUS';
 const UPDATE_MY_STATUS = 'UPDATE_MY_STATUS';
 const DELETE_POST = 'DELETE_POST';
 const UPDATE_MY_IMAGE = 'UPDATE_MY_IMAGE';
+//const SET_CONTACTS_DATA = 'SET_CONTACTS_DATA';
 
 let initialState = {
   // app
@@ -67,6 +69,7 @@ const setUserProfileData = (profile) => ({ type: SET_USER_PROFILE, profile });
 const setProfileStatus = (status) => ({ type: SET_STATUS, status });
 const updateMyStatus = (status) => ({ type: UPDATE_MY_STATUS, status });
 const setImageProfileSuccess = (photos) => ({ type: UPDATE_MY_IMAGE, photos });
+//const setContatcsAC = (contactsData) => ({type: SET_CONTACTS_DATA, contactsData})
 
 // Thunk
 export const setUserProfile = (userId) => {
@@ -103,4 +106,19 @@ export const setImageProfile = (file) => (dispatch) => {
   });
 };
 
+export const setContacts = (value) => (dispatch, getState) => {
+const userId = getState().auth.id
+
+  return profileAPI.saveContacts(value).then(response => {
+    if (response.data.resultCode === 0) {
+      dispatch(setUserProfile(userId))
+    } else {
+      let message = response.data.messages.length > 0
+      ? response.data.messages[0]
+      : 'Some error'
+      dispatch(stopSubmit('contacts', {_error: message}))
+      return Promise.reject()
+    }
+  })
+}
 export default profileReducer;

@@ -8,9 +8,12 @@ import ContactsForm from './ContactsForm';
 const ProfileInfo = (props) => {
 
   let [editMode, setEditMode] = useState(false);
+
   const submit = (value) => {
-    setEditMode(false)
-    console.log(value);
+    props.setContacts(value).then(() => {
+      setEditMode(false)
+    })
+    
   };
 
   const chooseImage = (e) => {
@@ -40,7 +43,7 @@ const ProfileInfo = (props) => {
         />
        {
          editMode
-         ? <ContactsForm onSubmit={submit} {...props.profile} />
+         ? <ContactsForm initialValues={props.profile} onSubmit={submit} {...props.profile} />
          : <Contacts edit={() => setEditMode(true)} {...props.profile}/>
        } 
        
@@ -51,20 +54,23 @@ const ProfileInfo = (props) => {
 };
 
 const Contacts = (props) => {
-  const { contacts, lookingForAJob, aboutMe, edit, ...restProps } = props;
+  const { contacts, lookingForAJob, fullName, aboutMe, edit, ...restProps } = props;
 
   return (
     <div  className={s.contactForm} >
       <button onClick={edit}>Edit</button>
       <div>
-      aboutMe: {aboutMe}
+     <b>Full name</b>: {fullName}
       </div>
       <div>
-      lookingForAJob: {lookingForAJob}
+      <b>aboutMe:</b> {aboutMe}
+      </div>
+      <div>
+      <b>lookingForAJob:</b> {lookingForAJob ? 'yes' : 'no'}
       </div>
       {contacts &&
         Object.keys(contacts).map((key) => {
-          return <div key={key}>{key}: {contacts[key]}</div>;
+          return <div key={key}><b>{key}:</b> {contacts[key]}</div>;
         })}
     </div>
   );

@@ -67,4 +67,7 @@ export const profileAPI = {
       },
     });
   },
+  saveContacts(value) {
+    return instance.put('profile', value)
+  }
 };
