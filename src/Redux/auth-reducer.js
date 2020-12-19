@@ -2,14 +2,17 @@ import { stopSubmit } from 'redux-form';
 import { usersAPI, authAPI } from '../Components/api/api';
 
 const SET_USER_DATA = 'SET_USER_DATA';
+const CAPTCHA_URL = 'CAPTCHA_URL';
 
 const initialState = {
   id: null,
   email: null,
   login: null,
   isAuth: false,
+  captchaURL: null
 };
 
+// REDUCER
 const authReducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_USER_DATA:
@@ -18,17 +21,26 @@ const authReducer = (state = initialState, action) => {
         ...action.data,
         //isAuth: true
       };
+      case CAPTCHA_URL:
+        return {
+          ...state,
+          ...action.data
+        }
 
     default:
       return state;
   }
 };
 
+// AC
 const setAuthMeData = (id, email, login, isAuth) => ({
   type: SET_USER_DATA,
   data: { id, email, login, isAuth },
 });
 
+const captchaURLSuccess = (captchaURL) => ({type: CAPTCHA_URL, data: {captchaURL}})
+
+// THUNK
 //if I autorized give me my data: id, email, login 
 export const setAuthUserData = () => {
   return (dispatch) => {
@@ -41,9 +53,9 @@ export const setAuthUserData = () => {
   };
 };
 
-export const login = (email, password, rememberMe) => {
+export const login = (email, password, rememberMe, captcha) => {
   return (dispatch) => {
-    authAPI.logIn(email, password, rememberMe).then((response) => {
+    authAPI.logIn(email, password, rememberMe, captcha).then((response) => {
       if (response.data.resultCode === 0) {
         authAPI.authMe().then((response) => {
           if (response.data.resultCode === 0) {
@@ -52,6 +64,9 @@ export const login = (email, password, rememberMe) => {
           }
         });
       } else {
+        if (response.data.resultCode === 10) {
+          dispatch(getCaptchaURL())
+        }
         let message =
           response.data.messages.length > 0
             ? response.data.messages[0]
@@ -71,5 +86,13 @@ export const logout = () => {
     });
   };
 };
+
+export const getCaptchaURL = () => async(dispatch) => {
+
+ const response = await authAPI.getCaptcha()
+  
+  dispatch(captchaURLSuccess(response.data.url))
+
+}
 
 export default authReducer;
