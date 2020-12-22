@@ -7,7 +7,7 @@ import {HashRouter} from "react-router-dom";
 import App from "./App";
 import {Provider} from "react-redux";
 
-
+// Provider makes context with store for connect()()
     ReactDOM.render(
         <HashRouter>
             <Provider store={store}>
